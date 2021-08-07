@@ -5,6 +5,8 @@ namespace PlanetsAndSpaceships
 {
     class Program
     {
+        private static object dictionary;
+
         static void Main(string[] args)
         {
             List<string> planetList = new List<string>() { "Mercury", "Mars" };
@@ -47,6 +49,35 @@ namespace PlanetsAndSpaceships
             planetList.Remove("Pluto");
             Console.WriteLine($"Without Pluto: { String.Join(',', planetList)}");
             // END // 
+
+
+            // Iterating over planets // 
+
+            // 1. Create a dictionary that will hold the name of a spacecraft that we have launched, and a list of names of the planets that it has visisted // 
+
+            var spaceDictionary = new Dictionary<string, List<string>>();
+
+            spaceDictionary.Add("Tyazhely Sputnik", new List<string> { "Venus" });
+            var sputnikDefinition = spaceDictionary["Tyazhely Sputnik"];
+            sputnikDefinition.Add("Planets this probe has visited");
+
+            spaceDictionary.Add("Sputnik 19", new List<string> { "Venus" });
+            var sputnik2Definition = spaceDictionary["Sputnik 19"];
+            sputnik2Definition.Add("Planets this probe has visited");
+
+            spaceDictionary.Add("Viking 2 Lander", new List<string> { "Mars" });
+            var vikingDefinition = spaceDictionary["Viking 2 Lander"];
+            vikingDefinition.Add("Planets this probe has visited");
+
+            spaceDictionary.Add("Phoenix", new List<string> { "Mars" });
+            var phoenixDefinition = spaceDictionary["Phoenix"];
+            phoenixDefinition.Add("Planets this probe has visited");
+
+            foreach (var item in dictionary)
+            {
+
+            }
+
         }
     }
 }
