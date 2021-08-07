@@ -57,25 +57,30 @@ namespace PlanetsAndSpaceships
 
             var spaceDictionary = new Dictionary<string, List<string>>();
 
-            spaceDictionary.Add("Tyazhely Sputnik", new List<string> { "Venus" });
-            var sputnikDefinition = spaceDictionary["Tyazhely Sputnik"];
-            sputnikDefinition.Add("Planets this probe has visited");
+            spaceDictionary.Add("Mercury", new List<string> { "Mariner 10", "Messenger", "BepiColombo" });
 
-            spaceDictionary.Add("Sputnik 19", new List<string> { "Venus" });
-            var sputnik2Definition = spaceDictionary["Sputnik 19"];
-            sputnik2Definition.Add("Planets this probe has visited");
+            spaceDictionary.Add("Venus", new List<string> { "Mariner 2", "Mariner 5" });
 
-            spaceDictionary.Add("Viking 2 Lander", new List<string> { "Mars" });
-            var vikingDefinition = spaceDictionary["Viking 2 Lander"];
-            vikingDefinition.Add("Planets this probe has visited");
+            spaceDictionary.Add("Mars", new List<string> { "Mariner 4", "Mariner 6" });
 
-            spaceDictionary.Add("Phoenix", new List<string> { "Mars" });
-            var phoenixDefinition = spaceDictionary["Phoenix"];
-            phoenixDefinition.Add("Planets this probe has visited");
+            spaceDictionary.Add("Jupiter", new List<string> { "Voyager 2" });
+            spaceDictionary.Add("Uranus", new List<string> { "Voyager 2" });
+            spaceDictionary.Add("Neptune", new List<string> { "New Horizons" });
 
-            foreach (var item in dictionary)
+
+            foreach (var item in spaceDictionary.Keys)
             {
+                Console.WriteLine($"{item}: ");
+                
+                foreach (var probe in spaceDictionary[item])
 
+                {
+                    Console.WriteLine($"{probe}");
+                    
+
+                }
+
+                Console.WriteLine("---------------------------------------");
             }
 
         }
